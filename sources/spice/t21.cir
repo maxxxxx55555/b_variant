@@ -1,0 +1,23 @@
+* Задание 2-1, вариант 22. Размыкание ключа в момент t = 200 мкс.
+* До размыкания ключ S1 замкнут (управляющее напряжение Vc = 1 В).
+V1 0 nv DC 309
+R2 n1 nv 77
+I1 0 nx DC 1.47
+R1 nx n1 100
+R3 n1 ns 38
+S1 ns n2 ctrl 0 SWM
+R4 n2 0 36
+L1 n2 n4 5m
+R5 n4 n3 17
+C1 n3 0 1u
+Vc ctrl 0 PULSE(1 0 200u 1n 1n 1 2)
+.model SWM SW(Vt=0.5 Vh=0.1 Ron=1u Roff=1e12)
+.options reltol=1e-7 abstol=1e-13 vntol=1e-10 method=gear numdgt=10
+.control
+set noaskquit
+op
+print v(n1) v(n2) v(n3) i(l1)
+tran 0.2u 1.7m 0 0.2u
+wrdata tran21.txt v(n3) i(l1)
+.endc
+.end

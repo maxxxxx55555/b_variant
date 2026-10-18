@@ -1,0 +1,40 @@
+* Задание 2-2, вариант 22. Синусоидальный режим, f = 1 кГц.
+* Источники нулевого напряжения VA* - амперметры: положительным
+* считается ток от первого узла ко второму.
+* Узел 4 схемы - базисный (узел 0).
+VA1 n1 a1 0
+R1 a1 n3 23
+VA2 n1 b1 0
+L1 b1 b2 6m
+V1 n3 b2 SIN(0 130 1k 0 0) AC 130 0
+VA3 n1 c1 0
+V2 c2 c1 SIN(0 284 1k 0 0) AC 284 0
+L2 c2 c3 10m
+C2 c3 n2 0.71u
+VA4 n3 d1 0
+C1 d1 0 0.83u
+I1 0 nf SIN(0 0.49 1k 0 0) AC 0.49 0
+VA7 nf r2a 0
+R2 r2a n2 6
+VA5 n2 f1 0
+C3 f1 0 0.52u
+VA6 n2 g1 0
+R3 g1 g2 94
+L3 g2 0 12m
+Rg n3 0 1e12
+.options numdgt=10
+.control
+set noaskquit
+set units=degrees
+ac lin 1 1000 1000
+print vm(n1) vp(n1) vm(n2) vp(n2) vm(n3) vp(n3)
+print vm(g2) vp(g2)
+print mag(i(va1)) ph(i(va1)) mag(i(va2)) ph(i(va2))
+print mag(i(va3)) ph(i(va3))
+print mag(i(va4)) ph(i(va4)) mag(i(va5)) ph(i(va5))
+print mag(i(va6)) ph(i(va6))
+tran 2u 24m 0 2u
+wrdata tran22.txt v(g2) i(va1) i(va2) i(va3) i(va4) i(va5) i(va6)
+meas tran irms rms i(va7) from=20m to=24m
+.endc
+.end

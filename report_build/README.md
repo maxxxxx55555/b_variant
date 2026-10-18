@@ -17,3 +17,7 @@
 
 Нужны: Python 3.13 (NumPy, SciPy, Matplotlib, SymPy, pypdf, reportlab), ngspice 42, Chromium
 (путь задан в `report_lib.py`, `CHROME`), шрифт Liberation Serif.
+
+LTspice (вариант 22): `var22/ltspice/` — `ltspice_gen.py` (генератор `.asc` и разбор схемы), `build_ltspice.py`
+(строит файлы в `var22/ltspice/files/` и сверяет их с расчётом на Python через ngspice: `python3 build_ltspice.py`),
+`var22/memo_ltspice.py` — памятка (PDF) с контрольными значениями.

@@ -1,0 +1,21 @@
+* DZ1 variant 22, task 1-2 (DC), LTspice netlist
+R1 n1 0 88
+R3 n1 0 93
+R2 f n1 21
+I1 0 f 2.97
+V2 e2 n1 64
+R6 e2 n2 54
+R4 n1 n2 38
+V1 d n2 290
+R5 d 0 93
+.dc V1 0 400 5
+.meas dc ir1 FIND I(R1) AT 290
+.meas dc ir2 FIND I(R2) AT 290
+.meas dc ir3 FIND I(R3) AT 290
+.meas dc ir4 FIND I(R4) AT 290
+.meas dc ir5 FIND I(R5) AT 290
+.meas dc ir6 FIND I(R6) AT 290
+.meas dc vn1 FIND V(n1) AT 290
+.meas dc vn2 FIND V(n2) AT 290
+.meas dc vf FIND V(f) AT 290
+.end

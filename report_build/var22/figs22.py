@@ -85,5 +85,15 @@ def spice_nodes():
     save(fig, OUT + "fig22_spice.png")
 
 
+def ltspice_nodes():
+    """Схема 2-2 с именами цепей, как в файлах LTspice (без амперметров: токи берутся у самих компонентов)."""
+    fig, ax = overlay_canvas("p22_v22.png", CROP)
+    lab = dict(color=ANN, fs=FS - 2)
+    label(ax, 180, 255, "n1", **lab); label(ax, 836, 255, "n2", **lab)
+    label(ax, 180, 925, "n3", **lab); label(ax, 836, 925, "0", **lab); ground(ax, P4, 22)
+    label(ax, 1056, 605, "g2", **lab)
+    save(fig, OUT + "fig22_ltspice.png")
+
+
 if __name__ == "__main__":
-    plain(); annotated(); complex_scheme(); spice_nodes()
+    plain(); annotated(); complex_scheme(); spice_nodes(); ltspice_nodes()

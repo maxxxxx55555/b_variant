@@ -1,0 +1,20 @@
+* DZ1 variant 22, task 2-2 (transient), LTspice netlist
+V2 N001 n1 SINE(0 284 1k) AC 284 0
+L2 N001 N002 10m
+C2 N002 n2 0.71u
+R1 n1 n3 23
+L1 n1 N003 6m
+V1 n3 N003 SINE(0 130 1k) AC 130 0
+C1 n3 0 0.83u
+Rg n3 0 1e12
+R2 N004 n2 6
+I1 0 N004 SINE(0 0.49 1k) AC 0.49 0
+C3 n2 0 0.52u
+R3 n2 g2 94
+L3 g2 0 12m
+.tran 0 24m 0 2u
+.options plotwinsize=0 numdgt=15
+.meas tran irms RMS I(R2) FROM 20m TO 24m
+.meas tran ul3max MAX V(g2) FROM 20m TO 24m
+.meas tran ul3min MIN V(g2) FROM 20m TO 24m
+.end

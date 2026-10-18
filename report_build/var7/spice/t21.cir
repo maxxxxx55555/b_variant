@@ -1,0 +1,23 @@
+* Задание 2-1, вариант 7. Замыкание ключа в момент t = 100 мкс.
+* До замыкания ключ S1 разомкнут (управляющее напряжение Vc = 0 В).
+I1 0 n4 DC 1.26
+L1 n4 n5 6m
+R2 n5 n1 60
+R1 n1 0 62
+V1 n6 n1 DC 218
+R3 n6 n2 79
+C1 n3 n1 0.59u
+R5 n3 n2 94
+R4 n2 ns 52
+S1 ns 0 ctrl 0 SWM
+Vc ctrl 0 PULSE(0 1 100u 1n 1n 1 2)
+.model SWM SW(Vt=0.5 Vh=0.1 Ron=1u Roff=1e12)
+.options reltol=1e-7 abstol=1e-13 vntol=1e-10 method=gear numdgt=10
+.control
+set noaskquit
+op
+print v(n1) v(n2) v(n3) i(l1)
+tran 0.1u 700u 0 0.1u
+wrdata tran21.txt v(n3) v(n1) i(l1)
+.endc
+.end

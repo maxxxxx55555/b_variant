@@ -1,0 +1,39 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * Задание 2-1, вариант 22. Размыкание ключа в момент t = 200 мкс.
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1
+v(n1) = -9.59599e+01
+v(n2) = -4.66832e+01
+v(n3) = -4.66832e+01
+i(l1) = 0.000000e+00
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+nv                                        -309
+n1                                    -95.9599
+nx                                     51.0401
+ns                                    -46.6832
+n2                                    -46.6832
+ctrl                                         1
+n4                                    -46.6832
+n3                                    -46.6832
+l1#branch                                    0
+vc#branch                                    0
+v1#branch                             -2.76675
+
+
+No. of Data Rows : 8606
+Note: Simulation executed from .control section 

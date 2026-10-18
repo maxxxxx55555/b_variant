@@ -1,0 +1,30 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * Задание 1-2, вариант 22. Цепь постоянного тока.
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1
+v(n1) = 7.329109e+00
+v(n2) = -2.88646e+01
+v(f) = 6.969911e+01
+v(d) = 2.611354e+02
+v(e2) = 7.132911e+01
+@r1[i] = 8.328533e-02
+@r3[i] = 7.880762e-02
+@r4[i] = 9.524672e-01
+@r5[i] = 2.807907e+00
+@r6[i] = 1.855440e+00
+@r2[i] = 2.970000e+00
+i(v1) = -2.80791e+00
+i(v2) = -1.85544e+00
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 81
+Note: Simulation executed from .control section 

@@ -1,0 +1,72 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * Задание 2-2, вариант 7. Синусоидальный режим, f = 8 кГц.
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1
+vm(n1) = 2.412732e+01
+vp(n1) = -1.75482e+02
+vm(n3) = 1.410000e+02
+vp(n3) = 0.000000e+00
+vm(n4) = 1.494460e+02
+vp(n4) = -1.45339e+02
+vm(a2,n4) = 1.340733e+02
+vp(a2,n4) = 4.004356e+01
+mag(i(va1)) = 1.905217e-01
+ph(i(va1)) = -4.99564e+01
+mag(i(va2)) = 1.178994e+00
+ph(i(va2)) = 9.990555e+01
+mag(i(va3)) = 1.018728e+00
+ph(i(va3)) = -8.54824e+01
+mag(i(va4)) = 1.909298e+00
+ph(i(va4)) = -5.29421e+00
+mag(i(va5)) = 8.562531e-01
+ph(i(va5)) = -7.86108e+01
+mag(i(va6)) = 2.005070e+00
+ph(i(va6)) = -1.55252e+02
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+n1                                           0
+a1                                           0
+a2                                           0
+n4                                           0
+b1                                           0
+b2                                           0
+c1                                           0
+d1                                           0
+d2                                           0
+h1                                           0
+n3                                           0
+e1                                           0
+e2                                           0
+f                                            0
+g                                            0
+l2#branch                                    0
+l1#branch                                    0
+l3#branch                                    0
+va7#branch                                   0
+va5#branch                                   0
+v2#branch                                    0
+v1#branch                                    0
+va6#branch                                   0
+va4#branch                                   0
+va3#branch                                   0
+va2#branch                                   0
+va1#branch                                   0
+
+
+No. of Data Rows : 48014
+irms                =  1.40714e+00 from=  2.00000e-02 to=  2.40000e-02
+Note: Simulation executed from .control section 

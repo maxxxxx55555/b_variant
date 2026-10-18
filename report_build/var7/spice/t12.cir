@@ -1,0 +1,24 @@
+* Задание 1-2, вариант 7. Цепь постоянного тока.
+* Узел 3 схемы - базисный (узел 0). У источника V первым указан узел
+* со знаком "+", т.е. тот, на который направлена стрелка ЭДС.
+V2 e2 n1 DC 115
+R6 e2 n2 18
+R4 n1 n2 36
+R5 n2 0 33
+R1 n1 0 46
+R3 n1 g 91
+V1 0 g DC 306
+I1 0 f DC 2.88
+R2 f n1 23
+.options numdgt=10
+.control
+set noaskquit
+op
+print v(n1) v(n2) v(f) v(g) v(e2)
+print @r1[i] @r3[i] @r4[i] @r5[i] @r6[i] @r2[i]
+print i(v1) i(v2)
+save @r1[i] @r3[i] @r4[i] @r5[i] @r6[i]
+dc V1 0 400 5
+wrdata dc12.txt @r1[i] @r3[i] @r4[i] @r5[i] @r6[i]
+.endc
+.end

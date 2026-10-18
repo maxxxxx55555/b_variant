@@ -1,0 +1,39 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * Задание 2-1, вариант 7. Замыкание ключа в момент t = 100 мкс.
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1
+v(n1) = 7.812000e+01
+v(n2) = 2.961200e+02
+v(n3) = 2.961200e+02
+i(l1) = 1.260000e+00
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+n4                                      153.72
+n5                                      153.72
+n1                                       78.12
+n6                                      296.12
+n2                                      296.12
+n3                                      296.12
+ns                                      296.12
+ctrl                                         0
+l1#branch                                 1.26
+vc#branch                                    0
+v1#branch                          -2.9612e-10
+
+
+No. of Data Rows : 7025
+Note: Simulation executed from .control section 
